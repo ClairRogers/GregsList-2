@@ -11,15 +11,17 @@ function draw() {
         template += car.getTemplate()
     });
     document.getElementById('available-content').innerHTML = template
-    document.getElementById('form-content').innerHTML = `            
+    document.getElementById('form-content').innerHTML = `  
+    <p>List your car below:</p>          
     <form onsubmit="app.controllers.carController.addCar(event)">
         <input type="text" name="make" placeholder="Make" required>
         <input type="text" name="model" placeholder="Model" required>
         <input type="decimal" name="year" placeholder="Year" required>
-        <input type="text" name="description" placeholder="Description">
         <input type="number" name="price" placeholder="Price" required>
-        <input type="url" name="imgUrl" placeholder="Image" required>
-        <button type="submit">Submit</button>
+        <input type="url" name="imgUrl" placeholder="Image URL" required>
+        <textarea class="my-1 textarea" name="description" rows="1" cols="70"
+            placeholder="Description"></textarea><br>
+        <button class="btn btn-secondary w-25 mb-4" type="submit">Submit</button>
     </form>`
 }
 

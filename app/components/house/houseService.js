@@ -30,13 +30,24 @@ export default class HouseService {
     get Houses() {
         return _state.houses.map(h => new House(h))
     }
-
-
     getApiHouses() {
         _api.get('houses')
             .then(res => {
                 let data = res.data.data.map(h => new House(h))
                 setState('houses', data)
+            })
+    }
+    addHouse(rawHouse) {
+        let newHouse = new House(rawHouse)
+        _api.post('houses', newHouse)
+            .then(res => {
+                this.getApiHouses()
+            })
+    }
+    deleteHouse(id) {
+        _api.delete('houses/' + id)
+            .then(res => {
+                this.getApiHouses()
             })
     }
 }

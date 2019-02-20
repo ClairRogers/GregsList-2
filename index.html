@@ -15,15 +15,18 @@
     <section class="container-fluid">
         <header class="row">
             <div class="col text-center">
-                <h1>WELCOME TO GREG'S LIST</h1>
+                <h1 class="my-3">WELCOME TO GREG'S LIST 2.0!</h1>
             </div>
         </header>
-        <div>
-            <button onclick="app.controllers.carController.getCars()">CARS</button>
-            <button onclick="app.controllers.houseController.getHouses()">HOUSES</button>
-            <button onclick="app.controllers.jobController.getJobs()">JOBS</button>
+        <div class="text-center">
+            <button class="btn btn-secondary mb-2 btn-lg"
+                onclick="app.controllers.carController.getCars()">CARS</button>
+            <button class="btn btn-secondary mb-2 btn-lg"
+                onclick="app.controllers.houseController.getHouses()">HOUSES</button>
+            <button class="btn btn-secondary mb-2 btn-lg"
+                onclick="app.controllers.jobController.getJobs()">JOBS</button>
         </div>
-        <section id="form-content">
+        <section id="form-content" class="text-center">
 
         </section>
         <main class="row" id="available-content">
