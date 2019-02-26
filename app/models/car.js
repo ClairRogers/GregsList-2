@@ -5,7 +5,7 @@ export default class Car {
         this.model = data.model
         this.price = parseInt(data.price).toFixed(2)
         this.year = data.year
-        this.imgUrl = data.imgUrl
+        this.imgUrl = data.imgUrl || '//placehold.it/300x300'
         this.description = data.description || 'No Description Provided'
     }
 

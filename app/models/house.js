@@ -3,7 +3,7 @@ export default class House {
         this._id = data._id
         this.bedrooms = data.bedrooms
         this.bathrooms = data.bathrooms
-        this.imgUrl = data.imgUrl
+        this.imgUrl = data.imgUrl || '//placehold.it/300x300'
         this.levels = data.levels
         this.year = data.year
         this.price = data.price
